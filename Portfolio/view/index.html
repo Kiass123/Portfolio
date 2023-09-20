@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+   <html lang="en">
+      <head>
+       <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+       <title>Your Portfolio</title>
+    </head>
+    <body>
+        <header>
+        <h1>Welcome To My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#service">My Service</a></li>
+                <li><a href="#works">My Works</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container2">
+    <img src="../image/developer.png" alt="Developer Image">
+    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="container">
+            <div class="image-container">
+                <img src="../image/kiass2.jpg" alt="Developer Image">
+            </div>
+    <div class="description">
+        <div class="name">Arham Chowdhury Kiass</div>
+        <div class="job-title">Web Developer</div>
+           <h3>With a warm disposition and persuasive manner, a role in any IT
+            sector would be an ideal place to start my career. My communication
+            skills and creativity are very well. I have some programming skills. I like
+            to research any topics, and I wish I will research any domain of
+            Software. Well-versed in programming languages including HTML,
+            PHP, CSS, MySQL. Strong background in project management and
+            customer relations. I am looking for new and interesting
+            programming <strong>(Python, React)</strong> challenges. <a href="#contact"><button background color: "orange">Hire Me</button></a></h3>
+    </div>
+</div>
+    </section>
+    <section id="service">
+        <h2>What Can I Do?</h2>
+        <div class="dropdown">
+            <button class="dropdown-button">Backend Development</button>
+            <div class="dropdown-content">
+                <a class="dropdown-item" href="#">PHP Laravel</a>
+                <a class="dropdown-item" href="#">Python Django (Next Learning Topic)</a>
+            </div>
+        </div>
+
+            <div class="dropdown">
+                <button class="dropdown-button">Frontend Development</button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="#">Javascript</a>
+                    <a class="dropdown-item" href="#">React (Recently Started)</a>
+                </div>
+            </div>
+        
+            <div class="dropdown">
+                <button class="dropdown-button">Data Analyst Skills</button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="#">Data Science</a>
+                    <a class="dropdown-item" href="#">Data Mining</a>
+                </div>
+            </div>
+        
+            <div class="dropdown">
+                <button class="dropdown-button">WordPress</button>
+            </div>
+        
+            <div class="dropdown">
+                <button class="dropdown-button">Other Programming Skills</button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="#">HTML, XML, CSS</a>
+                    <a class="dropdown-item" href="#">R</a>
+                    <a class="dropdown-item" href="#">C#</a>
+                    <a class="dropdown-item" href="#">MVC</a>
+                    <a class="dropdown-item" href="#">Apache web server</a>
+                </div>
+            </div>
+        
+            <div class="dropdown">
+                <button class="dropdown-button">Database</button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="#">MySQL</a>
+                </div>
+            </div>
+
+            </section>
+            <section id="works">
+                <h2>My Works</h2>
+                <p>This is a link to <a href="https://github.com/Kiass123?tab=repositories">GitHub Link</a></p>
+            </section>
+            <section id="contact">
+                <h2>Contact Form</h2>
+                <table>
+                <form method="post" action="../controller/contact.php" onsubmit="return validateForm()">
+            <tr>
+                <td>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required>
+                </td> 
+                </tr> <br>
+                <tr>
+                <td>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"  placeholder="Enter Your Email" required>
+                </td> 
+            </tr> <br>
+                <tr>
+                <td>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"  placeholder="Enter Your Query"></textarea>
+                </td> 
+                </tr> <br>
+                </table>
+                    <button type="submit">Send Message</button>
+            </form>
+            </section>
+
+            <footer>
+                <p>&copy; 2023 Arham Chowdhury Kiass</p>
+            </footer>
+         <script a href="../js/validate.js">
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    
+            if (name.trim() === "") {
+                alert("Full Name is required.");
+                return false;
+            }
+    
+            if (email.trim() === "") {
+                alert("Email is required.");
+                return false;
+            } else if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            if (message.trim() === "") {
+                alert("Message is required.");
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+</body>
+</html>
